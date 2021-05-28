@@ -6,4 +6,5 @@ assignees: buluma
 labels: bug
 ---
 Test Failed {{ env.ADJECTIVE }},
+{{ tools.context.payload }}
 
