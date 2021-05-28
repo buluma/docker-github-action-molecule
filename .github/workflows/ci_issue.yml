@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Buluma YAML lint
-        uses: ./
+        uses: ./ISSUE_TEMPLATE/custom.md
       - name: Create Issue
         if: failure()
         uses: buluma/create-an-issue@v2
