@@ -1,10 +1,10 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
-title: ''
+name: Lint failure
+about: A lint failure issue
+title: "[ACTION] Linting failed"
 labels: bug
 assignees: buluma
-
+labels: bug
 ---
-
+{{ tools.context.actor }}: {{ tools.context.sha }}
 
