@@ -1,7 +1,7 @@
 ---
-name: Lint failure_old
-about: A lint failure issue_old
-title: "[ACTION] Linting failed_old"
+name: Lint failure
+about: A lint failure issue
+title: "[ACTION] Linting failed"
 assignees: buluma
 labels: bug
 ---
