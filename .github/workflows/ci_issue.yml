@@ -7,9 +7,11 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Buluma YAML lint
-        uses: ./ISSUE_TEMPLATE/custom.md
+        uses: ./
       - name: Create Issue
         if: failure()
         uses: buluma/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/ISSUE_TEMPLATE/custom.md
