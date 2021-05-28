@@ -13,5 +13,6 @@ jobs:
         uses: buluma/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ADJECTIVE: failed
         with:
           filename: .github/ISSUE_TEMPLATE/custom.md
