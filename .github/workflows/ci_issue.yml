@@ -10,9 +10,10 @@ jobs:
         uses: ./
       - name: Create Issue
         if: failure()
-        uses: buluma/create-an-issue@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ADJECTIVE: failed
-#         with:
-#           filename: .github/ISSUE_TEMPLATE/custom.md
+        uses: buluma/create-issue-action@v2.0.0
+        with:
+          title: Build Failed
+          token: ${{secrets.GITHUB_TOKEN}}
+          assignees: ${{github.actor}}
+          labels: bug
+          body: Workflow failed for commit ${{github.sha}}
