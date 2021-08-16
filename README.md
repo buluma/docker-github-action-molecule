@@ -1,4 +1,4 @@
-# docker-github-action-molecule
+# GitHub molecule actions container
 
 A container that is used for [GitHub actions molecule](https://github.com/marketplace/actions/molecule-action).
 
