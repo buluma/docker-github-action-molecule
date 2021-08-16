@@ -1,17 +1,13 @@
 name: Package
 
 on:
-  push:
-    # Publish `main` as Docker `latest` image.
-    branches:
-      - main
-
-    # Publish `v1.2.3` tags as releases.
-#     tags:
-#       - v*
-
-  # Run tests for any PRs.
+  # push:
+    # tags_ignore:
+      # - '*'
   pull_request:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
 
 env:
   # TODO: Change variable to your image's name.
