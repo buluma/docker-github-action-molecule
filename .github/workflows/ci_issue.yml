@@ -1,7 +1,7 @@
 on: [push, pull_request]
 name: YAML lint
 jobs:
-  konstruktoidYAMLLint:
+  Lint:
     name: Buluma YAML lint
     runs-on: ubuntu-latest
     steps:
