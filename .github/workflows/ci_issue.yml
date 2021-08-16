@@ -1,7 +1,7 @@
 on: [push, pull_request]
 name: Lint
 jobs:
-  konstruktoidYAMLLint:
+  Lint:
     name: Linting
     runs-on: ubuntu-latest
     steps:
