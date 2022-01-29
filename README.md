@@ -4,8 +4,9 @@ A container that is used for [GitHub actions molecule](https://github.com/market
 
 [![github-action-molecule build status](https://img.shields.io/docker/cloud/build/buluma/github-action-molecule.svg)](https://hub.docker.com/repository/docker/buluma/github-action-molecule) 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/buluma/docker-github-action-molecule) 
-![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/buluma/docker-github-action-molecule) ![GitHub Release Date](https://img.shields.io/github/release-date/buluma/docker-github-action-molecule) 
-![GitHub commits since latest release (by date) for a branch](https://img.shields.io/github/commits-since/buluma/docker-github-action-molecule/2.3.7/main) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/buluma/docker-github-action-molecule/main)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/buluma/docker-github-action-molecule) 
+![GitHub Release Date](https://img.shields.io/github/release-date/buluma/docker-github-action-molecule) 
+![GitHub commits since latest release (by date) for a branch](https://img.shields.io/github/commits-since/buluma/docker-github-action-molecule/4.0.5/main) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/buluma/docker-github-action-molecule/main)
 
 This container contains:
 - [docker](https://www.docker.com/) - Used by molecule to start instances using the `docker` driver.
