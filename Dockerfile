@@ -1,7 +1,7 @@
-FROM buluma/fedora:33
+FROM buluma/fedora:35
 
-LABEL maintainer="Michael Buluma"
-LABEL build-date="2022-29-01T10:27:00Z"
+LABEL maintainer="Michael Buluma <me@buluma.co.ke>"
+LABEL build_date="2022-01-29"
 
 WORKDIR /github/workspace
 
@@ -9,11 +9,13 @@ RUN dnf install -y docker \
                    gcc \
                    git-core \
                    python3-devel \
-                   python3-pip \
                    python3-libselinux \
-                   python3-jmespath.noarch ; \
+                   python3-jmespath \
+                   python3-pip ; \
     dnf clean all
 
-RUN pip install tox docker "molecule[ansible,docker]>=3,<4" ansible-lint testinfra
+ADD requirements.txt /requirements.txt
+RUN python -m pip install -r /requirements.txt
 
-CMD function retry { counter=0 ; until "$@" ; do exit=$? ; counter=$(($counter + 1)) ; if [ $counter -ge ${max_failures:-3} ] ; then return $exit ; fi ; done ; return 0; } ; cd ${GITHUB_REPOSITORY:-.} ; if [ -f tox.ini -a ${command:-test} = test ] ; then retry tox ${options} ; else PY_COLORS=1 ANSIBLE_FORCE_COLOR=1 retry molecule ${command:-test} --scenario-name ${scenario:-default}; fi
+ADD cmd.sh /cmd.sh
+CMD sh /cmd.sh
