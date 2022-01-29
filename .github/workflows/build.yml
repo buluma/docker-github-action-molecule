@@ -4,8 +4,8 @@ name: Build and Push Container
 on:
   pull_request:
   push:
-   # branches:
-   #   - main
+   branches:
+    - main
   schedule:
     - cron: '0 3,5 * * *'
   workflow_dispatch:
