@@ -1,9 +1,9 @@
 # GitHub molecule actions container
 
-A container that is used for [GitHub actions molecule](https://github.com/marketplace/actions/molecule-action).
+A container that is used for [GitHub actions molecule](https://github.com/marketplace/actions/buluma-molecule).
 
-[![github-action-molecule build status](https://img.shields.io/docker/cloud/build/buluma/github-action-molecule.svg)](https://hub.docker.com/repository/docker/buluma/github-action-molecule) 
-![Docker Pulls](https://img.shields.io/docker/pulls/buluma/docker-github-action-molecule)
+[![Build and Push Container](https://github.com/buluma/docker-github-action-molecule/actions/workflows/build.yml/badge.svg)](https://github.com/buluma/docker-github-action-molecule/actions/workflows/build.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/buluma/github-action-molecule)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/buluma/docker-github-action-molecule) 
 ![GitHub Release Date](https://img.shields.io/github/release-date/buluma/docker-github-action-molecule) 
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/buluma/docker-github-action-molecule/main)
