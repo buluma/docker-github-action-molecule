@@ -25,7 +25,7 @@ RUN \
         if ansible-galaxy role install -vr /tmp/requirements.yml; then \
           break; \
         elif [ $i -gt 1 ]; then \
-          sleep 1; \
+          sleep 10; \
         else \
           exit 1; \
         fi; \
