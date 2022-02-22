@@ -17,5 +17,21 @@ RUN dnf install -y docker \
 ADD requirements.txt /requirements.txt
 RUN python -m pip install -r /requirements.txt
 
+# Temporary retry loop
+ADD requirements.yml /tmp/
+
+RUN \
+      for i in {5..1}; do \
+        if ansible-galaxy role install -vr /tmp/requirements.yml; then \
+          break; \
+        elif [ $i -gt 1 ]; then \
+          sleep 1; \
+        else \
+          exit 1; \
+        fi; \
+      done \
+  &&  ansible-galaxy role list
+# End Temp
+
 ADD cmd.sh /cmd.sh
 CMD sh /cmd.sh
