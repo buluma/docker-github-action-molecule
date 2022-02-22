@@ -9,7 +9,7 @@ retry() {
     exit=$?
     counter=$(($counter + 1))
     echo "ACTION: retry attempt ${counter}."
-    if [ $counter -ge ${max_failures:-3} ] ; then
+    if [ $counter -ge ${max_failures:-5} ] ; then
       return $exit
     fi
   done
