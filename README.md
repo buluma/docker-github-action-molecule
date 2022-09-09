@@ -13,7 +13,7 @@ This container contains:
 - [git](https://git-scm.com/) - Used to pull data from a repository.
 - [molecule](https://molecule.readthedocs.io/en/latest/) version 3.x.x - Used to orchestrate the tests.
 - [tox](https://tox.readthedocs.io/en/latest/) - Used to test multiple version of ansible if `tox.ini` exists.
-- [flake8](https://pypi.org/project/flake8/#description) - Modular source code checker.
+#- [flake8](https://pypi.org/project/flake8/#description) - Modular source code checker.
 
 The default behaviour is to:
 - See if `tox.ini` exists -> Run `tox`
