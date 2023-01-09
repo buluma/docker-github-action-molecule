@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "ACTION: Welcome to the molecule action."
+echo "ACTION: Welcome to the Molecule action."
 
 # A function to retry an action a few times until succesful.
 retry() {
@@ -34,8 +34,8 @@ fi || status="failed"
 
 # Finish with the correct failure code.
 if [ "${status}" = "failed" ] ; then
-  echo "ACTION: Thanks for using this action, good luck troubleshooting."
+  echo "ACTION: Thank you for using this action, good luck troubleshooting."
   exit 1
 else
-  echo "ACTION: Thanks for using this action."
+  echo "ACTION: Thank you for using this action."
 fi

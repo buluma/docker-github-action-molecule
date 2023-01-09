@@ -67,5 +67,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            buluma/github-action-molecule:latest, buluma/github-action-molecule:5.0.0
-            ghcr.io/${{ github.repository }}:latest, ghcr.io/${{ github.repository }}:5.0.0
+            buluma/github-action-molecule:latest, buluma/github-action-molecule:5.0.4
+            ghcr.io/${{ github.repository }}:latest, ghcr.io/${{ github.repository }}:5.0.4
