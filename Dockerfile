@@ -15,7 +15,8 @@ RUN dnf install -y docker \
     dnf clean all
 
 ADD requirements.txt /requirements.txt
-RUN python3 -m pip install -r /requirements.txt
+RUN python3 -m pip install -r /requirements.txt && \
+    python3 -m pip cache purge
 
 ADD cmd.sh /cmd.sh
 CMD sh /cmd.sh
