@@ -1,7 +1,7 @@
-FROM fedora:35
+FROM fedora:38
 
-LABEL maintainer="Michael Buluma <me@buluma.co.ke>"
-LABEL build_date="2022-05-13"
+LABEL maintainer="Shadow Walker <bulumaknight@gmail.com>"
+LABEL build_date="2023-05-16"
 
 WORKDIR /github/workspace
 
@@ -11,7 +11,8 @@ RUN dnf install -y docker \
                    python3-devel \
                    python3-libselinux \
                    python3-jmespath \
-                   python3-pip ; \
+                   python3-pip \
+                   rsync ; \
     dnf clean all
 
 ADD requirements.txt /requirements.txt
