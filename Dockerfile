@@ -1,7 +1,7 @@
 FROM fedora:38
 
 LABEL maintainer="Shadow Walker <bulumaknight@gmail.com>"
-LABEL build_date="2023-05-16"
+LABEL build_date="2023-07-21"
 
 WORKDIR /github/workspace
 
