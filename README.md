@@ -2,11 +2,11 @@
 
 A container that is used for [GitHub actions molecule](https://github.com/marketplace/actions/buluma-molecule).
 
-[![Build and Push Container](https://github.com/buluma/docker-github-action-molecule/actions/workflows/build.yml/badge.svg)](https://github.com/buluma/docker-github-action-molecule/actions/workflows/build.yml)
-![GitHub Release Date](https://img.shields.io/github/release-date/buluma/docker-github-action-molecule) 
+[![Build and Push Container](https://github.com/buluma/docker-github-action-molecule/actions/workflows/build-push-action.yml/badge.svg)](https://github.com/buluma/docker-github-action-molecule/actions/workflows/build-push-action.yml)
+![GitHub Release Date](https://img.shields.io/github/release-date/buluma/docker-github-action-molecule)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/buluma/docker-github-action-molecule/main)
 ![Docker Pulls](https://img.shields.io/docker/pulls/buluma/github-action-molecule)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/buluma/docker-github-action-molecule) 
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/buluma/docker-github-action-molecule)
 
 This container contains:
 - [docker](https://www.docker.com/) - Used by molecule to start instances using the `docker` driver.
