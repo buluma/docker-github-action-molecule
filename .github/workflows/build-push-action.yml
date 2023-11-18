@@ -25,4 +25,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: buluma/github-action-molecule:${{ env.tag }}
+          tags: buluma/github-action-molecule:latest, buluma/github-action-molecule:${{ env.tag }}
