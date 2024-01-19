@@ -2,11 +2,6 @@ name: Build and Push Container
 
 on:
   push:
-    branches:
-      - main
-      - testing
-      - dependabot/**
-      - renovate/**
 
 permissions: write-all
 
