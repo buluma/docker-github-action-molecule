@@ -32,23 +32,23 @@ jobs:
           # platforms: linux/amd64,linux/arm64
           tags: buluma/github-action-molecule:latest, buluma/github-action-molecule:${{ env.tag }}
 
-  dependabot:
-    runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'renovate[bot]' || github.actor == 'buluma' && github.event_name == 'pull_request'}}
-    steps:
-      - uses: "actions/checkout@master"
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Approve a PR
-        run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: "Merge Dependabot PR"
-        run: gh pr merge --auto --merge "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # dependabot:
+  #   runs-on: ubuntu-latest
+  #   # if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'renovate[bot]' || github.actor == 'buluma' && github.event_name == 'pull_request'}}
+  #   steps:
+  #     - uses: "actions/checkout@master"
+  #     - name: Dependabot metadata
+  #       id: metadata
+  #       uses: dependabot/fetch-metadata@v1
+  #       with:
+  #         github-token: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Approve a PR
+  #       run: gh pr review --approve "$PR_URL"
+  #       env:
+  #         PR_URL: ${{github.event.pull_request.html_url}}
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: "Merge Dependabot PR"
+  #       run: gh pr merge --auto --merge "$PR_URL"
+  #       env:
+  #         PR_URL: ${{github.event.pull_request.html_url}}
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
