@@ -74,4 +74,3 @@ jobs:
           push: true
           tags: |
             buluma/github-action-molecule:latest, buluma/github-action-molecule:v6.0.4
-            ghcr.io/${{ github.repository }}:latest, ghcr.io/${{ github.repository }}:6.0.4
