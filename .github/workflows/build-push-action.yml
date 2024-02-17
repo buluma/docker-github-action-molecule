@@ -1,20 +1,19 @@
-name: Build and Push Container
+
+name: build-push
 
 on:
   push:
-
-permissions: write-all
 
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v2
       - name: Login to DockerHub
-        uses: docker/login-action@v3
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -24,31 +23,7 @@ jobs:
         run: echo "tag=${short/main/latest}" >> "${GITHUB_ENV}"
       - name: Build and push
         id: docker_build
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v2
         with:
           push: true
-          sbom: true
-          provenance: mode=max
-          # platforms: linux/amd64,linux/arm64
-          tags: buluma/github-action-molecule:latest, buluma/github-action-molecule:${{ env.tag }}
-
-  # dependabot:
-  #   runs-on: ubuntu-latest
-  #   # if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'renovate[bot]' || github.actor == 'buluma' && github.event_name == 'pull_request'}}
-  #   steps:
-  #     - uses: "actions/checkout@master"
-  #     - name: Dependabot metadata
-  #       id: metadata
-  #       uses: dependabot/fetch-metadata@v1
-  #       with:
-  #         github-token: ${{ secrets.GITHUB_TOKEN }}
-  #     - name: Approve a PR
-  #       run: gh pr review --approve "$PR_URL"
-  #       env:
-  #         PR_URL: ${{github.event.pull_request.html_url}}
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #     - name: "Merge Dependabot PR"
-  #       run: gh pr merge --auto --merge "$PR_URL"
-  #       env:
-  #         PR_URL: ${{github.event.pull_request.html_url}}
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tags: buluma/github-action-molecule:${{ env.tag }}
