@@ -21,9 +21,10 @@ jobs:
         run: echo "short=${GITHUB_REF##*/}" >> "${GITHUB_ENV}"
       - name: Set tag
         run: echo "tag=${short/main/latest}" >> "${GITHUB_ENV}"
-      - name: Build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
+
+      - name: Build and push image.
+        uses: docker/build-push-action@v3.2.0
         with:
+          platforms: linux/amd64, linux/arm64
           push: true
           tags: buluma/github-action-molecule:latest, buluma/github-action-molecule:v24.2.0
