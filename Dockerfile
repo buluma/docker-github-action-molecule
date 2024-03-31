@@ -11,7 +11,7 @@ RUN apk add --no-cache docker \
       gcc \
       git \
       python3-dev \
-      python3-libselinux \
+      # python3-libselinux \
       py3-jmespath \
       py3-pip \
       rsync && \
