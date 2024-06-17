@@ -31,4 +31,4 @@ jobs:
         with:
           platforms: linux/amd64, linux/arm64
           push: true
-          tags: buluma/github-action-molecule:${{ env.tag }}, buluma/github-action-molecule:latest, buluma/github-action-molecule:v24.2.0
+          tags: buluma/github-action-molecule:${{ env.tag }}, buluma/github-action-molecule:latest, buluma/github-action-molecule:v24.6.17
