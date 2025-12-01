@@ -31,11 +31,10 @@ else
   PY_COLORS=1 ANSIBLE_FORCE_COLOR=1 retry molecule "${command:-test}" --scenario-name "${scenario:-default}"
 fi || status="failed"
 
-
 # Finish with the correct failure code.
 if [ "${status}" = "failed" ] ; then
-  echo "ACTION: Thank you for using this action, good luck troubleshooting."
+  echo "ACTION: Thanks for using this action, good luck troubleshooting."
   exit 1
 else
-  echo "ACTION: Thank you for using this action."
+  echo "ACTION: Thanks for using this action."
 fi
