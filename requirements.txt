@@ -1,8 +1,8 @@
-ansible~=9.1.0
-ansible-lint~=6.22.1
-docker~=6.1.3
-molecule~=6.0.3
+ansible~=10.5.0
+ansible-lint~=25.9.2
+docker~=7.1.0
+molecule~=24.9.0
 molecule-plugins[docker]~=23.5.0
-tox~=4.11.4
+tox~=4.21.2
 testinfra~=6.0.0
 yamllint~=1.33.0
