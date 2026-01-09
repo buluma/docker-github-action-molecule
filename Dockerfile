@@ -22,4 +22,4 @@ RUN apk add --no-cache docker \
 ENV PATH="/opt/venv/bin:${PATH}"
 
 ADD cmd.sh /cmd.sh
-CMD sh /cmd.sh
+CMD ["sh", "/cmd.sh"]
